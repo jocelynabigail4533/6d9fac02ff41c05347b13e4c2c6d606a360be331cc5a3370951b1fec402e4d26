@@ -1,4 +1,4 @@
-# plugin-loader-a52812
+# plugin-loader-d754c8
 
 A Go plugin-loader utility.
 
